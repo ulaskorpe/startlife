@@ -1,0 +1,88 @@
+[
+
+  {
+
+    "is_male":1,
+
+    "first_name":"Jordy",
+
+    "city":"Amsterdam",
+
+    "country":"Netherlands",
+
+    "birth_date":"1984-01-02"
+
+  },
+
+  {
+
+    "is_male":1,
+
+    "first_name":"Joël",
+
+    "city":"Castricum",
+
+    "country":"Netherlands",
+
+    "birth_date":"1993-08-22"
+
+  },
+
+  {
+
+    "is_male":0,
+
+    "first_name":"Mariella",
+
+    "city":"Amsterdam",
+
+    "country":"Netherlands",
+
+    "birth_date":"1998-03-05"
+
+  },
+
+  {
+
+    "is_male":1,
+
+    "first_name":"Moshen",
+
+    "city":"Zaandam",
+
+    "country":"Netherlands",
+
+    "birth_date":"1998-12-09"
+
+  },
+
+  {
+
+    "is_male":1,
+
+    "first_name":"Joris",
+
+    "city":"Leiden",
+
+    "country":"Netherlands",
+
+    "birth_date":"1988-01-09"
+
+  },
+
+  {
+
+    "is_male":0,
+
+    "first_name":"Ella",
+
+    "city":"Brussels",
+
+    "country":"Belgium",
+
+    "birth_date":"2000-03-19"
+
+  }
+
+]
+

@@ -19,8 +19,7 @@ return new class extends Migration
              $table->string('first_name');
              $table->string('city')->nullable()->default(null);
              $table->string('country')->nullable()->default(null);
-//             $table->foreignId('company_id')->references('id')->on('companies')->onDelete('cascade');
-            $table->integer('company_id');
+             $table->foreignId('company_id')->references('id')->on('companies')->onDelete('cascade');
              $table->date('birth_date')->default(now());
              $table->softDeletes();
             $table->timestamps();

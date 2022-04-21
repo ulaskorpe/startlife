@@ -6,6 +6,7 @@ use App\Models\Company;
 
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
@@ -23,7 +24,7 @@ class HomeController extends Controller
     public function  addCustomers(){
 
 
-       $txt =' {
+       $txt ='[ {
 
     "is_male":1,
 
@@ -105,13 +106,26 @@ class HomeController extends Controller
 
     "birth_date":"2000-03-19"
 
-  }';
+  }]';
         $file = public_path() . "/customers.json";
         $content = File::get($file);
        // $json = json_decode ($content);
         //echo $content;
-        var_dump(json_decode($txt, true));
+        $array = json_decode($txt, true);
+     //   var_dump($content);
+        DB::table('customers')->truncate();
+        foreach ($array as $item){
+            $c = new Customer();
+            $c->is_male = $item['is_male'];
+            $c->first_name = $item['first_name'];
+            $c->city = $item['city'];
+            $c->country = $item['country'];
+            $c->company_id = 1;
+            $c->birth_date=$item['birth_date'];
+            $c->save();
+        }
 
+        return Customer::with('company')->get();
     }
 
     public function filterCustomers($company_id = 0,$birth_date = null){

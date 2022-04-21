@@ -34,7 +34,7 @@ class CustomerSeeder extends Seeder
       $c->country=$item[3];
       $c->company_id=1;
       $c->birth_date=$item[4];
-      $c->save();
+    //  $c->save();
 
      }
     }
